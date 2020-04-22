@@ -1,0 +1,24 @@
+<!-- 投稿内容編集ページ -->
+
+<!-- エラーメッセージの表示 -->
+<% if @book3.errors.any? %>
+	<h3><%= @book3.errors.count %>error prohibited this obj from being saved:</h3>
+	<ul>
+		<% @book3.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+<!-- --------------- -->
+
+<div class = "row">
+	<div class = "col-md-6 col-md-ofset-3">
+		<h1>Editing Book</h1>
+		<!-- 部分テンプレートの適用 -->
+		<%= render "books/newform", book: @book %>
+
+		<%= link_to "Show", @book, class: "book_#{@book.id}"%> | 
+		<%= link_to "Back", '/books', class: "back" %>
+	</div>
+	<div class = "col-md-3"></div>
+</div>

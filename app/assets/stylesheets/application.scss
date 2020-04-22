@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+/* SCSSにBootstrapを読み込ませる。（記述順に注意） */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .header_text {
+ 	font-size: 32px;
+ 	color: white;
+ }
